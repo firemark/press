@@ -1,0 +1,33 @@
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="react-0.12.2.js"></script>
+    <script src="JSXTransformer-0.12.2.js"></script>
+    <script src="jquery-1.10.0.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container jumbotron">
+      <div id="content">
+      </div>
+    </div>
+    <script type="text/jsx">
+      var HelloMessage = React.createClass({
+        render: function() {
+          return <span className="label label-primary">Hello {this.props.name}</span>;
+        }
+      });
+
+      React.render(
+        (
+          <ul>
+            <li><HelloMessage name='Janusze' /> & <HelloMessage name='Grazyny' /></li>
+            <li><HelloMessage name='IPIJ' /></li>
+            <li><strong>a tu nie ma hello world!</strong></li>
+          </ul>
+         ),
+        document.getElementById('content')
+      );
+    </script>
+  </body>
+</html>

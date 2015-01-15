@@ -1,0 +1,108 @@
+<html>
+  <head>
+    <title>Hello React</title>
+    <script src="react-0.12.2.js"></script>
+    <script src="JSXTransformer-0.12.2.js"></script>
+    <script src="jquery-1.10.0.min.js"></script>
+    <link href="bootstrap.min.css" rel="stylesheet" />
+  </head>
+  <body>
+    <div class="container jumbotron">
+      <div id="content">
+      </div>
+    </div>
+    <script type="text/jsx">
+
+      var List = React.createClass({
+        getInitialState: function () {
+          return {
+            'messages': [],
+            'text': 'Janusze',
+          };
+        },
+
+        change: function (e) {
+          this.setState({text: e.target.value});
+        },
+
+        add: function (e) {
+          e.preventDefault();
+          var newMessages = this.state.messages.concat([this.state.text]);
+          this.setState({text: '', messages: newMessages});
+        },
+
+        del: function (i) {
+          var newMessages = this.state.messages.concat([]);
+          newMessages.splice(i, 1);
+          this.setState({messages: newMessages})
+        },
+
+        render: function() {
+          var self = this;
+          var elements = this.state.messages.map(function (msg, index){
+            return (
+              <li className="list-group-item">
+                <b className="label label-danger">{index}</b>
+                <HelloMessage name={msg} /> 
+                <button className='btn btn-xs btn-danger'
+                 onClick={self.del.bind(self, index)}>del</button>
+              </li>
+              );
+          });
+          return (
+            <div>
+              <ul className="list-group">{elements}</ul>
+              <input type='text' onChange={this.change} value={this.state.text} />
+              <button className='btn btn-sm btn-info' onClick={this.add}>add message</button>
+            </div>
+          );
+        }        
+      });
+
+      var HelloMessage = React.createClass({
+
+        getInitialState: function () {
+          return {
+            'label': 'success',
+          };
+        },
+
+        changeLabel: function (e) {
+          e.preventDefault();
+          var newLabel, label = this.state.label;
+          switch(label){
+            case 'success': newLabel = 'danger'; break;
+            case 'danger': newLabel = 'warning'; break;
+            case 'warning': newLabel = 'info'; break;
+            case 'info': newLabel = 'success'; break;
+          }
+          this.setState({label: newLabel});
+        },
+
+        render: function() {
+          var label = this.state.label;
+          return (
+            <span>
+              <span className={"label label-" + label}>
+                Hello {this.props.name}
+              </span>
+              <button className="btn btn-xs btn-primary" onClick={this.changeLabel}>change</button>
+            </span>
+          );
+        }
+      });
+
+      React.render(
+        (
+          <List>
+            <HelloMessage name='Janusze' /> 
+            <HelloMessage name='Grazyny' />
+            <HelloMessage name='IPIJ' />
+            <strong>a tu nie ma hello world!</strong>
+          </List>
+         ),
+        document.getElementById('content')
+      );
+    </script>
+  </body>
+</html>

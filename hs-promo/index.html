@@ -1,0 +1,182 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>HS promo</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="../bower_components/impress.js/css/impress-demo.css" rel="stylesheet" />
+
+    <style>
+        body {
+            background: #2B6CC4;
+        }
+        #intro {
+          background: white;
+        }
+        .impress-enabled .step {
+            background: none;
+            color: white;
+            border: #1164B4 solid 5px;
+            margin: auto;
+            font-size: 30pt;
+            opacity: 0;
+
+            -webkit-transition: opacity 1s;
+            -moz-transition:    opacity 1s;
+            -ms-transition:     opacity 1s;
+            -o-transition:      opacity 1s;
+            transition:         opacity 1s;
+        }
+
+        .step.active { opacity: 1; }
+
+        .gallery span {
+            width: 880px;
+            height: 50px;
+            vertical-align: middle;
+            text-align: center;
+            background-color: rgba(0,0,0,0.6);
+            position: absolute;
+            margin: auto;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        .gallery img {
+            position: absolute;
+            margin: auto;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        .gallery-down img {
+            position: absolute;
+            margin: auto;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 50pt;
+            padding-bottom: 50px;
+        }
+        ul {
+            list-style-type: square;
+            margin: auto;
+        }
+        li {
+          margin-bottom: 30px;
+        }
+        .list-img img {
+          vertical-align: middle;
+        }
+    </style>
+
+</head>
+
+<body class="impress-not-supported">
+<div id="impress">
+   <div id="intro" class="step slide gallery" data-x="0" data-y="0">
+        <img src='./logo.png' />
+   </div>
+   <div id="whatIsThis" class="step slide" data-x="1000" data-y="0">
+        <h1>Co to jest?</h1>
+   </div>
+   <div id="gallery4" class="step slide gallery" data-x="2000" data-y="3000" data-rotate-x='270'>
+        <img src='hs4.jpg' />
+        <span>Spotkania hakerów o ogólnej tematyce</span>
+   </div>
+   <div id="gallery3" class="step slide gallery" data-x="2000" data-y="2000" data-rotate-x='180'>
+        <img src='hs3.jpg' />
+        <span>Wspieranie lokalnych zdarzeń</span>
+   </div>
+   <div id="gallery5" class="step slide gallery" data-x="2000" data-y="4000">
+        <img src='hs5.jpg' />
+        <span>Warsztaty, prelekcja</span>
+   </div>
+   <div id="gallery6" class="step slide gallery" data-x="2000" data-y="4000">
+        <img src='hs6.jpg' />
+        <span>Więcej warsztatów!</span>
+   </div>
+   <div id="gallery2" class="step slide gallery" data-x="2000" data-y="1000" data-rotate-x='90'>
+        <img src='hs2.jpg' />
+        <span>Hackathony</span>
+   </div>
+   <div id="gallery1" class="step slide gallery" data-x="2000" data-y="0">
+        <img src='hs1.jpg' />
+        <span>luźne spotkania</span>
+   </div>
+   <div id="butWhy" class="step slide" data-x="1000" data-y="1000">
+        <h1>… Ale właściwie po co?</h1>
+        <ul>
+            <li><strong>Bo możemy</strong></li>
+            <li>Nie ma innego stowarzyszenia hackerów w aglomeracji śląskiej</li>
+            <li>Duże miasta w polsce już posiadają własny hackerspace - czas i żeby był tutaj.</li>
+            <li>By wspólpracować z mniejszymi grupami</li>
+        </ul>
+        <br />
+        <span class='list-img'>
+          <img src='pysilesia.png' />
+          <img src='meetjs.jpg' />
+          <img src='malinowe-pi.jpg' />
+        </span>
+   </div>
+   <div id="place" class="step slide" data-x="3000" data-y="0">
+        <h1>Własny lokal</h1>
+        <ul>
+            <li>24h przez 7 dni w tygodniu</li>
+            <li>Fajne miejsce dla ludzi pracujących zdalnie</li>
+            <li>Własny warsztacik</li>
+        </ul>
+   </div>
+   <div id="gallery-lokal1" class="step slide gallery-down" data-x="4000" data-y="0" >
+        <h1>lokal HS Kraków</h1>
+        <img src='hs-krk.jpg' />
+   </div>
+   <div id="gallery-lokal2" class="step slide gallery-down" data-x="4000" data-y="1000" data-rotate-x='90'>
+        <h1 style='font-size: 140%'>lokal <span style='font-size: 60%'>(a raczej piwnica)</span> HS Warszawa</h1>
+        <img src='hs-waw.JPG' />
+   </div>
+   <div id="gallery-lokal3" class="step slide gallery-down" data-x="4000" data-y="2000" data-rotate-x='180'>
+        <h1> A to nasz (:P) </h1>
+        <img src='hs-sil.JPG' />
+   </div>
+   <div id="whatNeed" class="step slide" data-x="5000" data-y="0">
+        <h1 style='font-size: 120%'>Dlaczego potrzebujemy ciebie?</h1>
+        <ul>
+            <li>Więcej ludzi o podobnych zainteresowaniach</li>
+            <li>Więcej własnych organizacji</li>
+            <li>Razem możemy zdziałać więcej</li>
+        </ul>
+   </div>
+    <div id="contact" class="step slide" data-x="6000" data-y="0">
+        <h1>Kontakt</h1>
+        <br />
+        <br />
+        <br />
+        #hackerspace-silesia @ freenode <br /><br />
+        https://facebook.com/HackerspaceSilesia <br /><br />
+        http://silesia.hackerspace.pl/ <br /><br />
+        <span style='font-size: 90%'>
+          https://lists.hackerspace.pl/mailman/listinfo/silesia
+        </span>
+   </div>
+
+   <div id="end" class="step slide" data-x="7000" data-y="0">
+        <h1>Pytania?</h1>
+   </div>
+</div>
+
+<script src="../bower_components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html> 

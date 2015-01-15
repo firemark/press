@@ -1,0 +1,145 @@
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=1024" />
+    <title>React js</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:regular,semibold,italic,italicsemibold|PT+Sans:400,700,400italic,700italic|PT+Serif:400,700,400italic,700italic" rel="stylesheet" />
+    <link href="../bower_components/impress.js/css/impress-demo.css" rel="stylesheet" />
+    <style>
+        body {
+            background: black;
+        }
+        #intro p {
+          text-align: right;
+          position: absolute;
+          bottom: 10;
+          right: 10;
+          font-size: 60%;
+        }
+        .step {
+            background: none;
+            color: white;
+            border: #1164B4 solid 5px;
+            margin: auto;
+            font-size: 30pt;
+        }
+        .gallery img {
+            position: absolute;
+            margin: auto;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+        }
+        h1 {
+            text-align: center;
+            font-size: 50pt;
+            padding-bottom: 50px;
+        }
+        ul {
+            list-style-type: square;
+        }
+        li {
+          margin-bottom: 10px;
+        }
+    </style>
+
+</head>
+
+<body class="impress-not-supported">
+<div id="impress">
+   <div id="intro" class="step slide" data-x="0" data-y="0">
+        <h1>React.js</h1>
+        <p>
+            Marek Piechula <br />
+            firemark / #hackerspace-silesia @ freenode 
+        </p>
+   </div>
+   <div id="what" class="step slide" data-x="1000" data-y="0">
+        <h1>co to jest React.js?</h1>
+        <ul>
+          <li>Biblioteką jsową do budowania UI</li>
+          <li style='font-size: 120%'>
+            <span style='text-decoration: line-through'>MVC</span>
+            <strong>only</strong> V
+          </li>
+        </ul>
+   </div>
+   <div id="why" class="step slide" data-x="2000" data-y="0">
+        <h1>dlaczego React.js?</h1>
+        <ul>
+          <li>Jest szybki</li>
+          <li>Działa</li>
+          <li>Budowanie komponentów trwa „chwilę”</li>
+        </ul>
+   </div>
+   <div id="info" class="step slide" data-x="2000" data-y="1000">
+        <h1>kilka objaśnień</h1>
+        <ul>
+          <li>React.js nie zastąpi ci całego MVC w aplikacji</li>
+          <li>Widoki są zbudowane przy pomocy <u>komponentów</u> nie szablonów</li>
+          <li>Budowanie komponentów trwa „chwilę”</li>
+        </ul>
+   </div>
+   <div id="jsx" class="step slide" data-x="0" data-y="1000">
+        <h1>JSX</h1>
+        <ul>
+          <li>Bo Javascript jest brzydki</li>
+          <li>Do kitu</li>
+          <li style='font-size: 50%'>najgorszy jezyk ever forever</li>
+          <li style='font-size: 50%'>zaraz po javie</li>
+          <li>ale …</li>
+        </ul>
+   </div>
+   <div id="love" class="step slide" data-x="0" data-y="1000" data-z="500">
+        <h1 style='margin-top: 35%'>EVERYBODY LOVES HTML</h1>
+   </div>
+   <div id="class" class="step slide" data-x="0" data-y="2000">
+        <h1>Klasy</h1>
+        <ul>
+          <li>Mogą posiadać stany <b style='color: red'>niemutowalne</b></li>
+          <li>posiadają też właściwości oraz klucze</li>
+          <li>Komponent może składać się z innych komponentów</li>
+          <li>obsługa zdarzeń jako funkcje</li>
+        </ul>
+   </div>
+   <div id="properties" class="step slide" data-x="1000" data-y="2000">
+        <h1>Właściwości (properties)</h1>
+        <ul>
+          <li>Są stałe, nie można ich zmieniać (w teorii)</li>
+          <li>Dzieci elementu też są właściwościami</li>
+          <li>Są zbliżone do atrybutów HTML (są wyjątki)</li>
+        </ul>
+   </div>
+   <div id="states" class="step slide" data-x="2000" data-y="2000">
+        <h1>Stany</h1>
+        <ul>
+          <li>Są niemutowalne - nie możemy ich modyfikować</li>
+          <li>Musimy je podmieniać innymi stanami</li>
+        </ul>
+   </div>
+   <div id="events" class="step slide" data-x="2000" data-y="3000">
+        <h1>Zdarzenia</h1>
+        <ul>
+          <li>Dodaje się jak metody do obiektów JSowych</li>
+          <li>Są łatwe do zaimplementowania</li>
+        </ul>
+   </div>
+   <div id="keys" class="step slide" data-x="1000" data-y="3000">
+        <h1>Klucze</h1>
+        <ul>
+        </ul>
+   </div>
+   <div id="refs" class="step slide" data-x="0" data-y="3000">
+        <h1>Referencje</h1>
+        <ul>
+        </ul>
+   </div>
+</div>
+
+<script src="../bower_components/impress.js/js/impress.js"></script>
+<script>impress().init();</script>
+
+</body>
+</html> 
